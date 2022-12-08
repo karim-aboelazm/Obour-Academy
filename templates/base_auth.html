@@ -1,0 +1,14 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{% block title %}{% endblock title %}</title>
+	{% include "snippets_auth/head.html" %}
+</head>
+<body>
+	{% block form_content %}{% endblock form_content %}
+	
+          
+	{% include "snippets_auth/scripts.html" %}
+</body>
+</html>

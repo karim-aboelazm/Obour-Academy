@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+{% block title %}
+    Update Profile
+{% endblock title %}
+
+{% block content %}
+<div id="about_us" class="about-us container-fluid" style="padding-top:150px;">
+    <div class="container">
+        <div class="about-row row">
+            <h2 class="text-center">Update Profile</h2>
+            <div class="col-md-8 mx-auto">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% bootstrap_form form %}
+                    <button type="submit" class="btn bg-dark col-md-12 text-white">Save <i class="fa fa-save"></i><button>
+                </form>
+            </div>
+        </div>
+    </div>    
+</div>
+{% endblock content %}
+    

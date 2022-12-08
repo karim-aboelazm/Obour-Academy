@@ -1,0 +1,329 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Obour Institutes
+{% endblock title %}
+
+{% block content %}
+
+{% include "snippets/slider.html" %}
+
+<section class="features">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-12">
+        <div class="features-post second-features">
+          <div class="features-content">
+            <div class="content-show">
+              <h4><i class="fa fa-graduation-cap"></i>Obour Institute</h4>
+            </div>
+            <div class="content-hide">
+              <p>"We are pleased to help you get acquainted with the Obour Institutes, 
+                which include the Higher Institute of Administration, Computers and 
+                Information Systems and the Higher Institute of Engineering and Technology 
+                in Obour, which offer you the opportunity of advanced education to obtain 
+                a bachelor's degree approved by the Minister of Higher Education in the 
+                various divisions and specializations available to you. </p>
+              <div class="scroll-to-section"><a href="https://www.oi.edu.eg/en/" target="_blank">More Info.</a></div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-12">
+        <div class="features-post">
+          <div class="features-content">
+            <div class="content-show">
+              <h4><i class="fa fa-pencil"></i>ATEC</h4>
+            </div>
+            <div class="content-hide">
+              <p>Obour institutes provide all the means of science and culture for all students, and they have courses for all fields, such as programming, languages, and other courses that qualify students for the labor market after graduation.</p>
+              <div class="scroll-to-section"><a href="https://www.facebook.com/ATEC.obour/" target="_blank">More Info.</a></div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section why-us" data-section="section2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-heading">
+          <h2>Why choose Obour Institutes?</h2>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div id='tabs'>
+          <ul>
+            <li><a href='#tabs-1'>Our Message</a></li>
+            <li><a href='#tabs-2'>Our Vision</a></li>
+            <li><a href='#tabs-3'>Our Development</a></li>
+          </ul>
+          <section class='tabs-content'>
+            <article id='tabs-1'>
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="{% static '' %}images/choose-us-image-01.png" alt="">
+                </div>
+                <div class="col-md-6">
+                  <h4>Our Message</h4>
+                  <p>The Obour Higher Institute of Engineering and Technology  
+                    in Obour seeks, through its architectural, electrical and 
+                    civil programs, to the integrated development of the student's 
+                    personality, and to build the professional ingredients for a distinguished 
+                    engineer who keeps pace with developments in the labor market, capable of 
+                    creativity, continuous learning, production and development of applied 
+                    scientific research to serve society and develop the environment.</p>
+                </div>
+              </div>
+            </article>
+            <article id='tabs-2'>
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="{% static '' %}images/choose-us-image-02.png" alt="">
+                </div>
+                <div class="col-md-6">
+                  <h4>Our Vision</h4>
+                  <p>That the Higher Transit Institute be among the top ten 
+                    Egyptian higher education institutions during the next decade, 
+                    and actively contribute to achieving the goals of sustainable 
+                    development in the Egyptian society and occupy a prominent position 
+                    among the colleges and higher institutes for the study of engineering 
+                    sciences in Egypt and supply the labor market with a distinguished graduate and provide an advanced administrative and academic work environment for 
+                    teaching and learning Scientific research, community service and development</p> 
+                </div>
+              </div>
+            </article>
+            <article id='tabs-3'>
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="{% static '' %}images/choose-us-image-03.png" alt="">
+                </div>
+                <div class="col-md-6">
+                  <h4>Our Development</h4>
+                  <p>We are pleased to help you get acquainted with the Obour institutes, which include the Higher Obour Institute for Management, Computers and Information Systems and the Higher Institute for Engineering and Technology in Obour
+                    Which provide you with the opportunity of advanced education to obtain a bachelor's degree approved by the Minister of Higher Education in the various divisions and specializations available to you.
+                    Obour Institutes are pleased to provide their services and activities in various scientific and educational fields and levels in various aspects, as they provide students who wish to develop their capabilities with plans and programs that include many curricula of modern life.
+                    </p>
+                </div>
+              </div>
+            </article>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section coming-soon" data-section="section3">
+  <div class="container">
+  {% if request.GET.m == "get_offer" %}
+  <div class="row">
+    <div class="col-md-12 col-xs-12">
+      <div class="continer centerIt">
+        <div>
+          <h4>Congratulations ! Dear student <em> {{student.full_name|title}} </em> Now You have got an Offer Coupon
+          You Coupon is <em>{{wgoff.coupon}}</em>
+          </h4>
+        </div>
+      </div>
+    </div> 
+  </div>
+  {%elif request.GET.m == "e"%}
+  <div class="row">
+    <div class="col-md-7 col-xs-12">
+      <div class="continer centerIt">
+        <div>
+          <h4>Hay ! Dear student <em> {{student.full_name|title}} </em> book any online course from A.T.E.C and get <em>30 % off</em> with coupon</h4>
+          <h4><em style="font-size:20px;">Book Now <i class="fa fa-arrow-right" aria-hidden="true"></i> </em></h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="right-content">
+        <div class="top-content">
+          <h6>Un expected error has done please refresh your page ..</h6>
+        </div>
+      </div>
+    </div> 
+  </div>
+  {% else %}
+  <div class="row">
+    <div class="col-md-7 col-xs-12">
+      <div class="continer centerIt">
+        <div>
+          <h4>Hay ! Dear student <em> {{student.full_name|title}} </em> book any online course from A.T.E.C and get <em>{{off.disvalue}} % off</em> with coupon</h4>
+          <h4><em style="font-size:20px;">Book Now <i class="fa fa-arrow-right" aria-hidden="true"></i> </em></h4>
+          <div class="counter">
+
+            <div class="days">
+              <div class="value">23</div>
+              <span>Days</span>
+            </div>
+
+            <div class="hours">
+              <div class="value">9</div>
+              <span>Hours</span>
+            </div>
+
+            <div class="minutes">
+              <div class="value">14</div>
+              <span>Minutes</span>
+            </div>
+
+            <div class="seconds">
+              <div class="value">4</div>
+              <span>Seconds</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="right-content">
+        <div class="top-content">
+          <h6>Register Now and <em>get immediate Offer</em> on online courses</h6>
+        </div>
+        <form id="contact" action="" method="post">
+          {% csrf_token %}
+          <div class="row">
+            <div class="col-md-12">
+              <fieldset>
+                <input name="full_name" type="text" class="form-control" id="name" placeholder="Your Name" required="">
+              </fieldset>
+            </div>
+            <div class="col-md-12">
+              <fieldset>
+                <input name="email" type="text" class="form-control" id="email" placeholder="Your Email" required="">
+              </fieldset>
+            </div>
+            <div class="col-md-12">
+              <fieldset>
+                <input name="phone" type="text" class="form-control" id="phone-number" placeholder="Your Phone Number" required="">
+              </fieldset>
+            </div>
+            <div class="col-md-12">
+              <fieldset>
+                <button type="submit" id="form-submit" class="button">Get Offer now</button>
+              </fieldset>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div> 
+  </div>   
+  {% endif %}
+  </div>
+</section>
+
+<section class="section courses" data-section="section4">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-heading">
+          <h2>Choose Your Course</h2>
+        </div>
+      </div>
+      <div class="owl-carousel owl-theme">
+        {% for course in all_courses  %}
+        <div class="item">
+          <a href="#">
+            <img src="{{course.image.url}}" style="height:150px" alt="Course">
+          </a>
+          <div class="down-content">
+            <h6><a href="#" class="text-dark"><strong>{{course.title}}</strong></a></h6>
+            <p style="text-align:justify">{{course.description|slice:"0:80"}} .. 
+              <br><a href="#" class="text-dark" style="text-decoration:underline;">READ MORE</a>
+            </p>
+            <div class="author-image">
+              <hr>
+              <p><strong>Instructor :</strong> {{course.instructor}}</p>
+            </div>
+            <div class="author-image">
+              {% if course.discound > 0 %}
+                <p><strong>Old price :</strong> <del>{{course.price}}</del> $</p>
+                <p><strong>New price :</strong> {{course.price_after_discount}} $</p>
+              {% else %}
+              <p><strong>price :</strong> {{course.price}} $</p>
+              {% endif %}
+            </div>
+            <div class="author-image">
+              <hr>
+              <a href="#" class="btn bg-dark text-white">Join Now <i class="fa fa-angle-double-right"></i></a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section video" data-section="section5">
+  <div class="container">
+    <div class="row">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static '' %}images/Obour/1.jpg" class="d-block w-100" alt="...">
+          </div>
+          {% for im in g_images  %}
+          <div class="carousel-item">
+            <img src="{{im.image.url}}" class="d-block w-100" alt="...">
+          </div>
+          {% endfor %}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" data-section="section6">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-heading">
+          <h2>Let’s Keep In Touch</h2>
+        </div>
+      </div>
+      <div class="col-md-6">         
+        <div class="left-content">
+          <h1 class="text-white">Obour Institutes</h1>
+          <hr style="color:white">
+          <p class="text-white">We are pleased to help you get acquainted with the Obour institutes, which include the Higher Institute of Management, Computers and Information Systems and the Higher Institute of Engineering and Technology in Obour, which offer you the opportunity of advanced education to obtain a bachelor's degree approved by the Minister of Higher Education in the various divisions and specializations available to you.
+          </p>
+          <ul class="information">
+            <li class="my-4"><i class="fa fa-map-marker mr-3" style="color:white;font-size:20px;"></i> <span style="color:white;">  21 Cairo - Belbeis Desert Rd, KALIOBEYA، Cairo</span></li>
+            <li class="my-4"><i class="fa fa-phone mr-3" style="color:white;font-size:20px;"></i> <span style="color:white;">   (02) 46110400</span></li>
+            <li class="my-4"><i class="fa fa-phone mr-3" style="color:white;font-size:20px;"></i> <span style="color:white;">   16308</span></li>
+          </ul>
+          <ul class="social-icons">
+            <li><a rel="nofollow" href="#" target="_blank" class="text-center"> <i class="fa fa-facebook"></i> </a></li>
+            <li><a rel="nofollow" href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a rel="nofollow" href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            <li><a rel="nofollow" href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+          </ul>  
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div id="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.5250987843724!2d31.471186314625776!3d30.27910961440457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145805bed9b8923b%3A0x41b5ccabb7c832c2!2sObour%20Institutes!5e0!3m2!1sen!2seg!4v1670514004139!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

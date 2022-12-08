@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Profile
+{% endblock title %}
+
+{% block content %}
+    <div id="about_us" class="about-us container-fluid" style="padding-top:150px;">
+        <div class="container">
+            <div class="about-row row">
+                <div class="image-col col-md-4">
+                    {% if student.image %}
+                    <img src="{{student.image.url}}" alt="">
+                    {% else %}
+                    <img src="{% static '' %}images/user-default.jpeg" alt="">
+                    {% endif %}
+                    <a href="{% url 'edu:update_profile' student.id %}" class="btn btn-dark"><i class="fa fa-edit"></i> Edit Profile</a>
+                </div>
+                <div class="detail-col col-md-8">
+                    <h2>{{student.full_name |title}}</h2>
+                        <p class="text-muted" style="text-align:justify;font-size:18px;">{{student.objective}}</p>
+                        <div class="row">
+                            <div class="col-md-6 col-12">
+                                <div class="info-list">
+                                    <ul>
+                                        <li><span>Birthday:</span>{{student.data_of_birth}}</li>
+                                        <li><span>Privacy:</span>{{student.privacy}}</li>
+                                        <li><span>City:</span>{{student.city}}</li>
+                                        <li><span>Study:</span>{{student.study_at}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div class="info-list">
+                                    <ul>
+                                        <li><span>Age:</span>{{student.age}} Years</li>
+                                        <li><span>Module:</span>{{student.module}}</li>
+                                        <li><span>Email:</span> {{request.user.email}}</li>
+                                        <li><span>Phone:</span>{{student.phone_number}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> 
+                </div>
+            </div>
+        </div>    
+    </div>
+{% endblock content %}
