@@ -78,7 +78,7 @@
 
     * Message That Student Will Receive Content 
     
-      > **Password Reset Link | Obour Institute**
+      > Password Reset Link | Obour Institute
       > Dear Student , Hager Mohammed ! You have requested a password reset for your account at hagermohammed133@gmail.com. 
       > Please go to the following page and add a new password.
       > http://127.0.0.1:8000/reset-password/hagermohammed133@gmail.com/bg5opg-389a60f10afeeb99896437b88618e51f/
