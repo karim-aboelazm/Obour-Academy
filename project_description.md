@@ -63,7 +63,7 @@
 
 ![image](https://user-images.githubusercontent.com/74789405/206638369-debddff8-39d3-44d6-b05f-f12b4535dbb3.png)
 
-![image](https://user-images.githubusercontent.com/74789405/206638410-6e49ed59-8fca-42a3-a2ef-bef60a08669a.png)
+![image](https://user-images.githubusercontent.com/74789405/206639296-4453e974-782a-4f2c-a295-5d3db9c54702.png)
 
 -----------------------------------------
 ### [6] Student Forget Password Page 
@@ -74,10 +74,19 @@
 
 ![image](https://user-images.githubusercontent.com/74789405/206638532-882a2806-1a77-40ca-b23c-8a5f5fa3ba88.png)
 
+> **Password Reset Link | Obour Institute**
+> Dear Student , Hager Mohammed ! You have requested a password reset for your account at hagermohammed133@gmail.com. 
+> Please go to the following page and add a new password.
+> http://127.0.0.1:8000/reset-password/hagermohammed133@gmail.com/bg5opg-389a60f10afeeb99896437b88618e51f/
+
 -------------------------------------------
 ### [7] Student Reset Password Page 
     * Student New Password 
     * Student Confirm Password
+
+![image](https://user-images.githubusercontent.com/74789405/206639143-65e5c287-f02d-4c30-88e7-9680c3714324.png)
+
+-------------------------------------------
 
 ### [8] Admin Page 
     * Users Table 
