@@ -76,10 +76,12 @@
 
 ![image](https://user-images.githubusercontent.com/74789405/206638532-882a2806-1a77-40ca-b23c-8a5f5fa3ba88.png)
 
-> **Password Reset Link | Obour Institute**
-> Dear Student , Hager Mohammed ! You have requested a password reset for your account at hagermohammed133@gmail.com. 
-> Please go to the following page and add a new password.
-> http://127.0.0.1:8000/reset-password/hagermohammed133@gmail.com/bg5opg-389a60f10afeeb99896437b88618e51f/
+    * Message That Student Will Receive Content 
+    
+      > **Password Reset Link | Obour Institute**
+      > Dear Student , Hager Mohammed ! You have requested a password reset for your account at hagermohammed133@gmail.com. 
+      > Please go to the following page and add a new password.
+      > http://127.0.0.1:8000/reset-password/hagermohammed133@gmail.com/bg5opg-389a60f10afeeb99896437b88618e51f/
 
 -------------------------------------------
 ### [7] Student Reset Password Page 
